@@ -9,7 +9,6 @@ Supported databases
 
 * *NEW* DynamoDB (experimental)
 * Mnesia
-* MongoDB
 * MySQL
 * PostgreSQL
 * Riak
@@ -34,7 +33,7 @@ Usage
     boss_news:start() % Mandatory! Hopefully will be optional one day
 
     DBOptions = [
-        {adapter, mock | tyrant | riak | mysql | pgsql | mnesia | mongodb},
+        {adapter, mock | tyrant | riak | mysql | pgsql | mnesia},
         {db_host, HostName::string()},
         {db_port, PortNumber::integer()},
         {db_username, UserName::string()},
