@@ -1,7 +1,6 @@
 %% @doc Chicago Boss database abstraction
 
 -module(boss_db).
-
 -export([start/1, stop/0]).
 
 -export([

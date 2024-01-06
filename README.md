@@ -82,6 +82,8 @@ EtsCacheServerOpts = [
 ]
 ```
 
+
+
 Introduction
 ------------
 
@@ -338,3 +340,18 @@ are useful PKs when data are being aggregated from multiple sources.
 
 The default Id type ::serial() may be explicitly supplied.  Note that
 all Id types, valid or otherwise, pass type validation.
+
+
+Test
+----
+
+To test mysql adapter, you need provide mysql connection env on test. Example:
+
+``` 
+MYSQL_HOST=127.0.0.1  \
+MYSQL_PORT=3306 \
+MYSQL_USER=user \
+MYSQL_PASSWORD=test \
+MYSQL_TEST_DBNAME=test \
+rebar3 eunit --suite=boss_db_adapter_mysql_otp_test
+```
